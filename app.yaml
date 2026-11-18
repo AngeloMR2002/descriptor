@@ -1,14 +1,14 @@
-runtime: php83
-
+runtime: php72
+api_version: 1
 handlers:
 - url: /
-  script: api/index.php
-
+  script: index.php
 # Serve images as static resources.
 - url: /(.+\.(gif|png|jpg))$
-  static_files: api/\1
-  upload: api/.+\.(gif|png|jpg)$
-
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+ 
 # Serve php scripts.
 - url: /(.+\.php)$
-  script: api/\1
+  script: \1
+
